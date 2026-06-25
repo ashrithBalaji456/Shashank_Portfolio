@@ -365,20 +365,20 @@ public class UserController {
             </a>
             
             <div className="tech-icon-boxes" style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
-              <div className="tech-icon-box" title="Java Console / Terminal">
+              <div className="tech-icon-box terminal" title="Java Console / Terminal">
                 <Terminal size={16} />
               </div>
-              <div className="tech-icon-box" title="Database">
+              <div className="tech-icon-box database" title="Database">
                 <Database size={16} />
               </div>
-              <div className="tech-icon-box" title="JavaScript">
+              <div className="tech-icon-box js" title="JavaScript">
                 <span className="js-icon-text">JS</span>
               </div>
               <div className="tech-icon-divider"></div>
-              <a href="https://github.com/Shashank51-code" target="_blank" rel="noopener noreferrer" className="tech-icon-box" title="GitHub Profile">
+              <a href="https://github.com/Shashank51-code" target="_blank" rel="noopener noreferrer" className="tech-icon-box github" title="GitHub Profile">
                 <Github size={16} />
               </a>
-              <a href="https://www.linkedin.com/in/shashank-kudha-5ba284252/" target="_blank" rel="noopener noreferrer" className="tech-icon-box" title="LinkedIn Profile">
+              <a href="https://www.linkedin.com/in/shashank-kudha-5ba284252/" target="_blank" rel="noopener noreferrer" className="tech-icon-box linkedin" title="LinkedIn Profile">
                 <Linkedin size={16} />
               </a>
             </div>
