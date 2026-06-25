@@ -65,6 +65,8 @@ function App() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [formSending, setFormSending] = useState(false);
+  const [formError, setFormError] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -132,21 +134,54 @@ function App() {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) return;
     
-    // Simulate sending message
-    setFormSubmitted(true);
+    setFormSending(true);
+    setFormError(false);
     
-    // Clear form
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
+    fetch("https://formsubmit.co/ajax/ashrithbalajigudla@gmail.com", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject || "Contact Form Submission",
+        message: formData.message
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      setFormSending(false);
+      if (data.success === "true" || data.success === true) {
+        setFormSubmitted(true);
+        // Clear form
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+        
+        // Dismiss toast notification after 5 seconds
+        setTimeout(() => {
+          setFormSubmitted(false);
+        }, 5000);
+      } else {
+        setFormError(true);
+        setTimeout(() => {
+          setFormError(false);
+        }, 5000);
+      }
+    })
+    .catch(error => {
+      console.error("Error submitting contact form:", error);
+      setFormSending(false);
+      setFormError(true);
+      setTimeout(() => {
+        setFormError(false);
+      }, 5000);
     });
-
-    // Dismiss toast notification after 5 seconds
-    setTimeout(() => {
-      setFormSubmitted(false);
-    }, 5000);
   };
 
   const toggleMobileMenu = () => {
@@ -573,8 +608,13 @@ public class UserController {
                   required
                 ></textarea>
               </div>
-              <button type="submit" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
-                <span>Send Message</span>
+              <button 
+                type="submit" 
+                className="btn btn-primary" 
+                style={{ width: '100%', justifyContent: 'center' }}
+                disabled={formSending}
+              >
+                <span>{formSending ? 'Sending...' : 'Send Message'}</span>
                 <Send size={16} />
               </button>
             </form>
@@ -603,6 +643,30 @@ public class UserController {
           <div>
             <h4 style={{ color: 'white', fontSize: '0.95rem', fontWeight: 600 }}>Message Sent!</h4>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem' }}>Thank you, Shashank will get back to you shortly.</p>
+          </div>
+        </div>
+      )}
+
+      {formError && (
+        <div style={{
+          position: 'fixed',
+          bottom: '24px',
+          right: '24px',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '0.8rem',
+          background: '#370a0a',
+          border: '1px solid #ef4444',
+          borderRadius: '8px',
+          padding: '1rem 1.5rem',
+          boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
+          zIndex: 1000,
+          animation: 'slideIn 0.3s ease-out'
+        }}>
+          <X style={{ color: '#ef4444' }} />
+          <div>
+            <h4 style={{ color: 'white', fontSize: '0.95rem', fontWeight: 600 }}>Submission Failed</h4>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem' }}>Please try again or email directly.</p>
           </div>
         </div>
       )}
