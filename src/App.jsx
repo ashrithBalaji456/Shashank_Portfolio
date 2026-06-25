@@ -137,7 +137,7 @@ function App() {
     setFormSending(true);
     setFormError(false);
     
-    fetch("https://formsubmit.co/ajax/ashrithbalajigudla@gmail.com", {
+    fetch("https://formsubmit.co/ajax/shashankkudha51@gmail.com", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
