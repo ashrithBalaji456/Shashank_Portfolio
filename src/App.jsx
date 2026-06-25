@@ -17,7 +17,8 @@ import {
   CheckCircle2,
   ChevronRight,
   Sun,
-  Moon
+  Moon,
+  Download
 } from 'lucide-react';
 import ParticleBackground from './components/ParticleBackground';
 import './App.css';
@@ -222,6 +223,10 @@ function App() {
             </ul>
 
             <div className="nav-socials-desktop" style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
+              <a href="/Shashank_Kudha_Resume.pdf" download className="nav-resume-btn" title="Download Resume">
+                <span>Resume</span>
+                <Download size={14} />
+              </a>
               <a href="https://github.com/Shashank51-code" target="_blank" rel="noopener noreferrer" className="nav-social-link" title="GitHub Profile">
                 <Github size={18} />
               </a>
@@ -268,18 +273,24 @@ function App() {
             </ul>
             <div style={{
               display: 'flex',
-              justifyContent: 'center',
-              gap: '1.5rem',
+              flexDirection: 'column',
+              gap: '1rem',
               marginTop: '1.5rem',
               paddingTop: '1.2rem',
               borderTop: '1px solid var(--border-color)'
             }}>
-              <a href="https://github.com/Shashank51-code" target="_blank" rel="noopener noreferrer" className="nav-social-link" onClick={closeMobileMenu}>
-                <Github size={20} />
+              <a href="/Shashank_Kudha_Resume.pdf" download className="mobile-resume-btn" onClick={closeMobileMenu}>
+                <span>Download Resume</span>
+                <Download size={16} />
               </a>
-              <a href="https://www.linkedin.com/in/shashank-kudha-5ba284252/" target="_blank" rel="noopener noreferrer" className="nav-social-link" onClick={closeMobileMenu}>
-                <Linkedin size={20} />
-              </a>
+              <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem' }}>
+                <a href="https://github.com/Shashank51-code" target="_blank" rel="noopener noreferrer" className="nav-social-link" onClick={closeMobileMenu}>
+                  <Github size={20} />
+                </a>
+                <a href="https://www.linkedin.com/in/shashank-kudha-5ba284252/" target="_blank" rel="noopener noreferrer" className="nav-social-link" onClick={closeMobileMenu}>
+                  <Linkedin size={20} />
+                </a>
+              </div>
             </div>
           </div>
         )}
@@ -347,6 +358,11 @@ public class UserController {
               <Briefcase size={16} />
               <span>Open to Opportunities</span>
             </a>
+
+            <a href="/Shashank_Kudha_Resume.pdf" download className="opportunities-badge-pill resume-download-pill" title="Download Resume">
+              <Download size={16} />
+              <span>Download Resume</span>
+            </a>
             
             <div className="tech-icon-boxes" style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
               <div className="tech-icon-box" title="Java Console / Terminal">
@@ -358,7 +374,7 @@ public class UserController {
               <div className="tech-icon-box" title="JavaScript">
                 <span className="js-icon-text">JS</span>
               </div>
-              <div style={{ width: '1px', height: '20px', background: 'rgba(255,255,255,0.15)', margin: '0 0.2rem' }}></div>
+              <div className="tech-icon-divider"></div>
               <a href="https://github.com/Shashank51-code" target="_blank" rel="noopener noreferrer" className="tech-icon-box" title="GitHub Profile">
                 <Github size={16} />
               </a>

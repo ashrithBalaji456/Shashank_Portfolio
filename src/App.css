@@ -406,20 +406,20 @@ body.light-theme .glass-card::before {
   width: 42px;
   height: 42px;
   border-radius: 8px;
-  border: 1.5px solid rgba(255, 255, 255, 0.12);
-  background: rgba(255, 255, 255, 0.02);
+  border: 1.5px solid rgba(10, 102, 194, 0.45);
+  background: rgba(10, 102, 194, 0.08);
   color: #cbd5e1;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.01);
+  box-shadow: 0 0 12px rgba(10, 102, 194, 0.08);
 }
 
 .tech-icon-box svg {
   stroke-width: 2px;
   color: #3b82f6;
-  opacity: 0.8;
+  opacity: 1;
   transition: opacity 0.3s ease;
 }
 
@@ -427,21 +427,28 @@ body.light-theme .glass-card::before {
   font-size: 0.9rem;
   font-weight: 800;
   color: #3b82f6;
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .tech-icon-box:hover {
   border-color: #3b82f6;
-  background: rgba(10, 102, 194, 0.15);
+  background: rgba(10, 102, 194, 0.22);
   color: #ffffff;
   transform: translateY(-4px);
-  box-shadow: 0 0 15px rgba(10, 102, 194, 0.3);
+  box-shadow: 0 0 18px rgba(10, 102, 194, 0.4);
 }
 
 .tech-icon-box:hover svg,
 .tech-icon-box:hover .js-icon-text {
   opacity: 1;
   color: #ffffff;
+}
+
+.tech-icon-divider {
+  width: 1px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 0 0.2rem;
 }
 
 .hero-ctas {
@@ -483,6 +490,89 @@ body.light-theme .glass-card::before {
 .btn-secondary:hover {
   background: rgba(255, 255, 255, 0.1);
   transform: translateY(-2px);
+}
+
+/* Resume Buttons & Pills */
+.nav-resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 6px;
+  border: 1.5px solid rgba(10, 102, 194, 0.45);
+  background: rgba(10, 102, 194, 0.08);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(10, 102, 194, 0.05);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav-resume-btn svg {
+  color: #3b82f6;
+  transition: color 0.3s ease;
+}
+
+.nav-resume-btn:hover {
+  background: rgba(10, 102, 194, 0.2);
+  border-color: #3b82f6;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 0 15px rgba(10, 102, 194, 0.25);
+}
+
+.nav-resume-btn:hover svg {
+  color: #ffffff;
+}
+
+.mobile-resume-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 1.5px solid rgba(10, 102, 194, 0.45);
+  background: rgba(10, 102, 194, 0.1);
+  color: #ffffff;
+  transition: all 0.3s ease;
+  width: 100%;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.mobile-resume-btn svg {
+  color: #3b82f6;
+}
+
+.mobile-resume-btn:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff;
+}
+
+.mobile-resume-btn:hover svg {
+  color: #ffffff;
+}
+
+.resume-download-pill {
+  background: rgba(139, 92, 246, 0.12) !important;
+  border: 1.5px solid rgba(139, 92, 246, 0.5) !important;
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.15) !important;
+}
+
+.resume-download-pill svg {
+  color: #a78bfa !important;
+}
+
+.resume-download-pill:hover {
+  background: rgba(139, 92, 246, 0.25) !important;
+  border-color: #a78bfa !important;
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.35), 0 5px 15px rgba(0, 0, 0, 0.2) !important;
 }
 
 /* Avatar Frame */
@@ -1073,14 +1163,63 @@ body.light-theme .opportunities-badge-pill:hover {
 }
 
 body.light-theme .tech-icon-box {
-  border-color: rgba(15, 23, 42, 0.12);
-  background: rgba(255, 255, 255, 0.8);
-  color: #334155;
+  border-color: rgba(10, 102, 194, 0.38);
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--primary);
+  box-shadow: 0 4px 12px rgba(10, 102, 194, 0.05);
 }
 
 body.light-theme .tech-icon-box:hover {
   border-color: var(--primary);
-  background: rgba(10, 102, 194, 0.08);
+  background: rgba(10, 102, 194, 0.12);
+  box-shadow: 0 6px 18px rgba(10, 102, 194, 0.18);
+}
+
+body.light-theme .tech-icon-divider {
+  background: rgba(15, 23, 42, 0.25);
+}
+
+/* Light theme resume button overrides */
+body.light-theme .nav-resume-btn {
+  border-color: rgba(10, 102, 194, 0.35);
+  background: rgba(10, 102, 194, 0.04);
+  color: var(--primary);
+}
+
+body.light-theme .nav-resume-btn:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff;
+}
+
+body.light-theme .mobile-resume-btn {
+  background: rgba(10, 102, 194, 0.04);
+  border-color: rgba(10, 102, 194, 0.35);
+  color: var(--primary);
+}
+
+body.light-theme .mobile-resume-btn:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff;
+}
+
+body.light-theme .resume-download-pill {
+  color: #7c3aed !important;
+  background: rgba(139, 92, 246, 0.05) !important;
+  border-color: rgba(139, 92, 246, 0.35) !important;
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.05) !important;
+}
+
+body.light-theme .resume-download-pill:hover {
+  background: #7c3aed !important;
+  border-color: #7c3aed !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.25) !important;
+}
+
+body.light-theme .resume-download-pill:hover svg {
+  color: #ffffff !important;
 }
 
 body.light-theme .social-pill {
