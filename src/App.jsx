@@ -221,6 +221,15 @@ function App() {
               <li><a href="#contact" className="nav-link">Contact</a></li>
             </ul>
 
+            <div className="nav-socials-desktop" style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
+              <a href="https://github.com/Shashank51-code" target="_blank" rel="noopener noreferrer" className="nav-social-link" title="GitHub Profile">
+                <Github size={18} />
+              </a>
+              <a href="https://www.linkedin.com/in/shashank-kudha-5ba284252/" target="_blank" rel="noopener noreferrer" className="nav-social-link" title="LinkedIn Profile">
+                <Linkedin size={18} />
+              </a>
+            </div>
+
             {/* Theme Toggle Button */}
             <button onClick={toggleTheme} className="theme-toggle-btn" aria-label="Toggle Theme">
               {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
@@ -257,6 +266,21 @@ function App() {
               <li><a href="#education" className="nav-link" onClick={closeMobileMenu}>Education</a></li>
               <li><a href="#contact" className="nav-link" onClick={closeMobileMenu}>Contact</a></li>
             </ul>
+            <div style={{
+              display: 'flex',
+              justifyContent: 'center',
+              gap: '1.5rem',
+              marginTop: '1.5rem',
+              paddingTop: '1.2rem',
+              borderTop: '1px solid var(--border-color)'
+            }}>
+              <a href="https://github.com/Shashank51-code" target="_blank" rel="noopener noreferrer" className="nav-social-link" onClick={closeMobileMenu}>
+                <Github size={20} />
+              </a>
+              <a href="https://www.linkedin.com/in/shashank-kudha-5ba284252/" target="_blank" rel="noopener noreferrer" className="nav-social-link" onClick={closeMobileMenu}>
+                <Linkedin size={20} />
+              </a>
+            </div>
           </div>
         )}
       </nav>
@@ -324,7 +348,7 @@ public class UserController {
               <span>Open to Opportunities</span>
             </a>
             
-            <div className="tech-icon-boxes">
+            <div className="tech-icon-boxes" style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
               <div className="tech-icon-box" title="Java Console / Terminal">
                 <Terminal size={16} />
               </div>
@@ -334,6 +358,13 @@ public class UserController {
               <div className="tech-icon-box" title="JavaScript">
                 <span className="js-icon-text">JS</span>
               </div>
+              <div style={{ width: '1px', height: '20px', background: 'rgba(255,255,255,0.15)', margin: '0 0.2rem' }}></div>
+              <a href="https://github.com/Shashank51-code" target="_blank" rel="noopener noreferrer" className="tech-icon-box" title="GitHub Profile">
+                <Github size={16} />
+              </a>
+              <a href="https://www.linkedin.com/in/shashank-kudha-5ba284252/" target="_blank" rel="noopener noreferrer" className="tech-icon-box" title="LinkedIn Profile">
+                <Linkedin size={16} />
+              </a>
             </div>
           </div>
         </div>

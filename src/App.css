@@ -91,9 +91,43 @@ body.light-theme .nav-status-badge {
   }
 }
 
+.nav-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+}
+
+.nav-social-link:hover {
+  background: rgba(10, 102, 194, 0.12);
+  border-color: var(--primary);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+body.light-theme .nav-social-link {
+  border-color: rgba(15, 23, 42, 0.08);
+  background: rgba(0, 0, 0, 0.02);
+  color: var(--text-secondary);
+}
+
+body.light-theme .nav-social-link:hover {
+  background: rgba(10, 102, 194, 0.08);
+  color: var(--primary);
+}
+
 @media (max-width: 768px) {
   .nav-status-badge {
     display: none;
+  }
+  .nav-socials-desktop {
+    display: none !important;
   }
 }
 
