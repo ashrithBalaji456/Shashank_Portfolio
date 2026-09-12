@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./styles.css";
 
+const baseUrl = import.meta.env.BASE_URL || "./";
+
 const links = {
   email: "mailto:shashankkudha51@gmail.com",
   rawEmail: "shashankkudha51@gmail.com",
@@ -10,7 +12,7 @@ const links = {
   github: "https://github.com/Shashank51-code",
   payroll: "https://github.com/shashank51-code/EmployeePayrollSystem",
   bank: "https://github.com/shashank51-code/BankManagementSystem",
-  resume: "/Shashank_Kudha_Resume.pdf",
+  resume: `${baseUrl}Shashank_Kudha_Resume.pdf`,
 };
 
 const skillCategories = [
@@ -511,7 +513,16 @@ function App() {
 
             <div className="portrait-card">
               <div className="portrait-img-wrapper">
-                <img src="/profile.jpg" alt="Shashank Kudha" />
+                <img 
+                  src={`${baseUrl}profile.jpg`} 
+                  alt="Shashank Kudha" 
+                  onError={(e) => {
+                    if (!e.currentTarget.dataset.retried) {
+                      e.currentTarget.dataset.retried = "true";
+                      e.currentTarget.src = "./profile.jpg";
+                    }
+                  }}
+                />
               </div>
             </div>
 
