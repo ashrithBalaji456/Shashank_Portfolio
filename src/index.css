@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --font-primary: 'Outfit', sans-serif;
+  
+  /* Color Palette - Dark Theme (Default) */
+  --bg-dark: #050a18;
+  --bg-card: rgba(10, 22, 47, 0.82); /* Much more opaque dark glass */
+  --bg-card-hover: rgba(14, 28, 59, 0.92); /* Almost solid dark card */
+  
+  --primary: #0A66C2; /* LinkedIn blue */
+  --primary-glow: rgba(10, 102, 194, 0.4);
+  --secondary: #8b5cf6; /* Violet */
+  --secondary-glow: rgba(139, 92, 246, 0.3);
+  --accent: #ec4899; /* Pink */
+  
+  --text-primary: #ffffff; /* Brighter white text */
+  --text-secondary: #cbd5e1; /* Slate 300 for clean reading */
+  --text-muted: #94a3b8; /* Slate 400 */
+  
+  --border-color: rgba(255, 255, 255, 0.12); /* More visible card border */
+  --border-color-glow: rgba(10, 102, 194, 0.5);
+  
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.light-theme {
+  --bg-dark: #f8fafc; /* Lighter soft slate background */
+  --bg-card: rgba(255, 255, 255, 0.90); /* Very opaque white glass card */
+  --bg-card-hover: rgba(255, 255, 255, 0.97); /* Almost solid white card */
+  
+  --text-primary: #0f172a; /* Slate 900 for dark legible text */
+  --text-secondary: #334155; /* Slate 700 for secondary text */
+  --text-muted: #64748b; /* Slate 500 */
+  
+  --border-color: rgba(15, 23, 42, 0.12); /* Distinct dark borders for cards */
+  --border-color-glow: rgba(10, 102, 194, 0.45);
+  
+  --primary-glow: rgba(10, 102, 194, 0.15);
+  --secondary-glow: rgba(139, 92, 246, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  border: 2px solid var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+#root {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, textarea {
+  font-family: inherit;
+}
