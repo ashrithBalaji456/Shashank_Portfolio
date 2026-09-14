@@ -11,7 +11,7 @@ const links = {
   linkedin: "https://www.linkedin.com/in/shashank-kudha-5ba284252/",
   github: "https://github.com/Shashank51-code",
   payroll: "https://github.com/shashank51-code/EmployeePayrollSystem",
-  bank: "https://github.com/shashank51-code/BankManagementSystem",
+  helpdesk: "https://github.com/shashank51-code/InternalHelpdeskTicketSystem",
   resume: `${baseUrl}Shashank_Kudha_Resume.pdf`,
 };
 
@@ -24,7 +24,7 @@ const skillCategories = [
         <polyline points="8 6 2 12 8 18" />
       </svg>
     ),
-    skills: ["Java (Core & Advanced)", "SQL", "JavaScript", "HTML5 & CSS3"],
+    skills: ["Java"],
   },
   {
     category: "Backend Development",
@@ -36,10 +36,10 @@ const skillCategories = [
         <line x1="6" y1="18" x2="6.01" y2="18" />
       </svg>
     ),
-    skills: ["Spring Boot", "Spring Security", "Spring Cloud", "Spring Data JPA", "Hibernate", "RESTful APIs"],
+    skills: ["Spring Boot", "Spring Data JPA", "Hibernate", "RESTful APIs"],
   },
   {
-    category: "Databases & Storage",
+    category: "Databases",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <ellipse cx="12" cy="5" rx="9" ry="3" />
@@ -47,30 +47,19 @@ const skillCategories = [
         <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
       </svg>
     ),
-    skills: ["PostgreSQL", "MySQL", "JDBC", "Database Normalization", "Query Optimization"],
+    skills: ["PostgreSQL", "MySQL"],
   },
   {
-    category: "Tools & Platforms",
+    category: "Tools",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
       </svg>
     ),
-    skills: ["Git & GitHub", "Docker", "Postman", "Maven", "Linux & Shell"],
+    skills: ["Git", "GitHub", "Postman", "Maven"],
   },
   {
-    category: "AI & LLM Systems",
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2z" />
-        <path d="M12 8v4" />
-        <path d="M12 16h.01" />
-      </svg>
-    ),
-    skills: ["LLM Response Evaluation", "Fine-Tuning Workflows", "Instruction-Following Analysis", "Dataset Refinement"],
-  },
-  {
-    category: "Core Foundations",
+    category: "Core Concepts",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <polygon points="12 2 2 7 12 12 22 7 12 2" />
@@ -78,40 +67,42 @@ const skillCategories = [
         <polyline points="2 12 12 17 22 12" />
       </svg>
     ),
-    skills: ["Data Structures & Algorithms", "OOP Architecture", "DBMS", "API Security", "Design Patterns"],
+    skills: ["OOP", "Collections", "Exception Handling", "SQL", "DBMS", "DSA"],
   },
 ];
 
 const projects = [
   {
-    title: "Employee Payroll Management System",
+    title: "Employee Payroll Management System – Backend",
     category: "backend",
-    subtitle: "Enterprise payroll processing, role security & audit trails",
-    date: "Dec 2025 - Jan 2026",
-    tech: ["Java", "Spring Boot", "Spring Security", "REST APIs", "PostgreSQL"],
+    subtitle: "Enterprise payroll calculations, payslip generation & 15+ REST APIs",
+    date: "Apr 2026 – Jun 2026",
+    tech: ["Java", "Spring Boot", "Spring Data JPA", "Hibernate", "PostgreSQL", "REST APIs"],
     href: links.payroll,
-    impact: "Engineered comprehensive backend payroll covering 5+ modules, BCrypt credential security, and departmental calculation flows.",
+    impact: "Engineered comprehensive backend payroll covering 15+ REST APIs, payslip generation, and automated monthly net salary calculation.",
     bullets: [
-      "Developed backend architecture for 5+ core payroll modules (salary calculations, payslips, transaction trails).",
-      "Secured endpoints with Spring Security, multi-level role access control, and BCrypt password encryption.",
-      "Optimized query performance on PostgreSQL for high-volume employee compensation reporting.",
+      "Implemented employee management features including add, view, update, delete, and search, along with department creation and employee-to-department assignment.",
+      "Built payroll module to generate monthly payroll by calculating basic salary, allowances, deductions, and final net salary for each employee.",
+      "Designed payslip generation and viewing functionality with payroll history to store, view, and search past monthly records.",
+      "Applied layered architecture using Spring Boot, Hibernate, and PostgreSQL, and validated 15+ REST APIs across all modules using Postman.",
     ],
-    architecture: "Built with Spring Boot REST controllers, Spring Data JPA entities, and Spring Security JWT filters mapped to containerized PostgreSQL."
+    architecture: "Built with layered architecture using Spring Boot, Spring Data JPA, Hibernate, and PostgreSQL, with comprehensive validation of 15+ REST APIs via Postman."
   },
   {
-    title: "Bank Management System",
+    title: "Internal Helpdesk Ticket Management System – Backend",
     category: "backend",
-    subtitle: "Core banking platform with transaction auditing & PIN security",
-    date: "Feb 2025 - Mar 2025",
-    tech: ["Java", "REST APIs", "Java Serialization", "SHA-256", "PostgreSQL"],
-    href: links.bank,
-    impact: "Architected core banking backend supporting 8+ financial operations, automated transfers, and cryptographic customer PIN security.",
+    subtitle: "Ticket lifecycle tracking, engineer assignment & 10+ REST APIs",
+    date: "Jan 2026 – Mar 2026",
+    tech: ["Java", "Spring Boot", "Spring Data JPA", "Hibernate", "PostgreSQL", "REST APIs"],
+    href: links.helpdesk,
+    impact: "Created complete internal helpdesk ticketing platform with support engineer assignment, multi-stage status workflows, and 10+ Postman API tests.",
     bullets: [
-      "Supported 8+ core banking financial operations including account creation, balance lookups, and account status freezing.",
-      "Engineered automated fund transfer validation mechanisms to eliminate race conditions.",
-      "Secured customer PINs using SHA-256 hashing and serialized database storage protocols.",
+      "Developed user management covering creation, updates, deletion, and profile viewing, with department setup and user-to-department assignment.",
+      "Created ticket management system to create, view, update, and delete tickets, including assigning and reassigning tickets to support engineers.",
+      "Managed ticket status tracking across open, in-progress, resolved, and closed stages, with comment functionality for adding and viewing updates.",
+      "Built dashboard to display total, open, closed, and pending tickets, and verified all module endpoints through 10+ REST API tests in Postman.",
     ],
-    architecture: "Employed strict DAO isolation, SHA-256 cryptographic hashing, and automated transactional rollback checks to safeguard monetary transfers."
+    architecture: "Employed Spring Boot layered backend with Spring Data JPA & Hibernate for ticket-user associations, comment threads, and stage tracking, tested across 10+ endpoints in Postman."
   },
 ];
 
@@ -434,13 +425,13 @@ function App() {
           <div className="hero-copy">
             <span className="eyebrow">
               <span className="status-dot"></span>
-              Java Backend Developer & AI Systems
+              Java Backend Developer
             </span>
             <h1>
               Hi, I'm <span className="gradient-text">Shashank Kudha</span>
             </h1>
             <p className="lead">
-              Java and Spring Boot engineer building high-reliability REST APIs, microservices, and database systems, backed by hands-on LLM post-training evaluation at Ethara AI.
+              Java Backend Developer with hands-on experience in building RESTful APIs and CRUD applications using Spring Boot, Spring Data JPA, Hibernate, and PostgreSQL. Proficient in layered architecture, JPA/Hibernate mappings, and API testing with Postman. Eager to contribute to scalable backend systems.
             </p>
 
             <div className="hero-actions" aria-label="Primary portfolio actions">
@@ -536,10 +527,10 @@ function App() {
             </div>
 
             <div className="floating-chip chip-two">
-              <div className="chip-icon green">🤖</div>
+              <div className="chip-icon green">🛠️</div>
               <div>
-                <span style={{ display: "block", fontSize: "0.72rem", color: "var(--text-muted)", textTransform: "uppercase" }}>AI Evaluation</span>
-                <span>500+ LLM Evals</span>
+                <span style={{ display: "block", fontSize: "0.72rem", color: "var(--text-muted)", textTransform: "uppercase" }}>Database & APIs</span>
+                <span>PostgreSQL + REST</span>
               </div>
             </div>
           </div>
@@ -549,10 +540,10 @@ function App() {
         <section className="metrics-section reveal" aria-label="Key accomplishments">
           <div className="metrics-grid">
             {[
-              { number: "500+", label: "LLM Responses Evaluated", desc: "Coherence, correctness & instruction-following" },
-              { number: "100+", label: "Structured Tasks", desc: "High-precision annotation benchmarks met" },
-              { number: "6+", label: "Production Workflows", desc: "Employee payroll & auditing endpoints" },
-              { number: "8+", label: "Core Banking Operations", desc: "Fund transfers, searches & PIN security" },
+              { number: "15+", label: "REST APIs Validated", desc: "Payroll & compensation endpoints tested in Postman" },
+              { number: "10+", label: "Helpdesk Endpoints", desc: "Ticket lifecycle, dashboard & user management" },
+              { number: "Layered", label: "Architecture", desc: "Spring Boot, Spring Data JPA, Hibernate & PostgreSQL" },
+              { number: "Post-Training", label: "LLM Evaluation", desc: "Annotation & dataset quality intern at Ethara AI" },
             ].map((m) => (
               <div className="metric-card" key={m.label}>
                 <div className="metric-number">{m.number}</div>
@@ -569,17 +560,17 @@ function App() {
             <span className="eyebrow">About Me</span>
             <h2>Architecting resilient backend systems with modern engineering rigor.</h2>
             <p className="section-sub">
-              Combining strong Java foundations, Spring Boot security standards, and AI evaluation discipline.
+              Hands-on Java backend engineering, layered Spring Boot architectures, and rigorous API validation.
             </p>
           </div>
 
           <div className="about-card">
             <div className="about-text">
               <p>
-                I am a Java Backend Developer with expertise in building enterprise REST APIs, Spring Security frameworks, and database architectures using PostgreSQL and MySQL.
+                I am a Java Backend Developer with hands-on experience in building RESTful APIs and CRUD applications using Spring Boot, Spring Data JPA, Hibernate, and PostgreSQL.
               </p>
               <p>
-                From architecting payroll administration engines with role-based access control to engineering core banking transaction systems, my focus is on reliability, performance, and writing clean, scalable code.
+                Proficient in layered architecture, JPA/Hibernate mappings, and API testing with Postman. Experienced in developing payroll and helpdesk ticketing backend systems, with a strong focus on clean code, database normalization, and scalable backend services.
               </p>
             </div>
 
@@ -587,13 +578,15 @@ function App() {
               <div className="highlight-item">
                 <div className="highlight-icon">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                    <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
+                    <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
+                    <line x1="6" y1="6" x2="6.01" y2="6" />
+                    <line x1="6" y1="18" x2="6.01" y2="18" />
                   </svg>
                 </div>
                 <div>
-                  <strong>Spring Security & Role Control</strong>
-                  <p>Implemented BCrypt password hashing, session tokens, and strict permission segregation.</p>
+                  <strong>Spring Boot & Layered Architecture</strong>
+                  <p>Controller, Service, Repository patterns with Hibernate/JPA object relational mapping.</p>
                 </div>
               </div>
 
@@ -604,8 +597,8 @@ function App() {
                   </svg>
                 </div>
                 <div>
-                  <strong>LLM Alignment & Evaluation</strong>
-                  <p>Evaluated 500+ LLM completions at Ethara AI for coherence and instruction adherence.</p>
+                  <strong>RESTful APIs & Postman Testing</strong>
+                  <p>Validated 15+ payroll endpoints and 10+ helpdesk ticket endpoints across complete CRUD cycles.</p>
                 </div>
               </div>
 
@@ -618,8 +611,8 @@ function App() {
                   </svg>
                 </div>
                 <div>
-                  <strong>Relational Database Optimization</strong>
-                  <p>Designed normalized schemas, stored procedures, and JDBC integration patterns.</p>
+                  <strong>PostgreSQL & MySQL Databases</strong>
+                  <p>Designed relational schemas, foreign key constraints, and optimized queries for business logic.</p>
                 </div>
               </div>
             </div>
@@ -631,7 +624,7 @@ function App() {
           <div className="section-header">
             <span className="eyebrow">Work History</span>
             <h2>Experience</h2>
-            <p className="section-sub">Demonstrated backend engineering and AI evaluation experience.</p>
+            <p className="section-sub">Professional internship and model evaluation experience.</p>
           </div>
 
           <div className="experience-timeline">
@@ -640,24 +633,24 @@ function App() {
               <div className="timeline-card">
                 <div className="timeline-header">
                   <div className="timeline-title">
-                    <h3>Large Language Model Fine-Tuning Intern</h3>
-                    <div className="timeline-company">Ethara AI • Remote</div>
+                    <h3>LLM Post-Training Intern</h3>
+                    <div className="timeline-company">Ethara AI</div>
                   </div>
-                  <span className="timeline-period-badge">Feb 2026 - Apr 2026</span>
+                  <span className="timeline-period-badge">Feb 2026 – Apr 2026</span>
                 </div>
 
                 <ul className="timeline-bullets">
                   <li className="timeline-bullet-item">
-                    Evaluated and benchmarked 500+ LLM-generated responses across correctness, coherence, relevance, and instruction-following criteria during an intensive 3-month internship.
+                    Reviewed LLM-generated responses for correctness, coherence, relevance, and instruction-following to support model improvement efforts.
                   </li>
                   <li className="timeline-bullet-item">
-                    Identified model hallucination patterns, quality edge-cases, and recurring failure modes to contribute to dataset refinement.
+                    Identified incomplete, inconsistent, and low-quality responses from daily outputs and reported them to enhance overall dataset quality.
                   </li>
                   <li className="timeline-bullet-item">
-                    Applied structured annotation guidelines across 100+ evaluation tasks while maintaining high accuracy and meeting strict project milestones.
+                    Applied structured annotation guidelines while reviewing repeated response sets, maintaining consistent accuracy and meeting daily deadlines.
                   </li>
                   <li className="timeline-bullet-item">
-                    Collaborated with a cross-functional team of 5+ reviewers to resolve feedback conflicts and ensure consistency across evaluation pipelines.
+                    Collaborated with team members and quality leads to resolve feedback issues, improving evaluation consistency across the annotation process.
                   </li>
                 </ul>
               </div>
@@ -784,29 +777,62 @@ function App() {
           </div>
         </section>
 
-        {/* Education Section */}
+        {/* Education & Certifications Section */}
         <section className="section reveal" id="education">
           <div className="section-header">
-            <span className="eyebrow">Academic Background</span>
-            <h2>Education</h2>
-            <p className="section-sub">Formal computer science and engineering education.</p>
+            <span className="eyebrow">Academic & Industry Credentials</span>
+            <h2>Education & Certifications</h2>
+            <p className="section-sub">Formal computer science, engineering degrees, and professional certifications.</p>
           </div>
 
-          <div className="credential-column-card">
-            <h3>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: "var(--accent-primary)" }}>
-                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-                <path d="M6 12v5c3 3 9 3 12 0v-5" />
-              </svg>
-              Institute of Aeronautical Engineering, Hyderabad
-            </h3>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "24px", maxWidth: "1000px", margin: "0 auto" }}>
+            <div className="credential-column-card" style={{ margin: 0 }}>
+              <h3>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: "var(--accent-primary)" }}>
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                  <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                </svg>
+                Education
+              </h3>
 
-            <div className="edu-box">
-              <h4>Bachelor of Technology in Computer Science and Engineering (AI & ML)</h4>
-              <p>Specialization in Artificial Intelligence, Machine Learning & Systems Architecture</p>
-              <div style={{ display: "flex", gap: "10px", flexWrap: "wrap", alignItems: "center" }}>
-                <span className="edu-score-pill">GPA: 7.05 / 10.0</span>
-                <span style={{ fontSize: "0.85rem", color: "var(--text-muted)" }}>Graduated: April 2026</span>
+              <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+                <div className="edu-box">
+                  <h4>B.Tech – Computer Science and Engineering (AI & ML)</h4>
+                  <p>Institute of Aeronautical Engineering, Hyderabad</p>
+                  <div style={{ display: "flex", gap: "10px", flexWrap: "wrap", alignItems: "center" }}>
+                    <span className="edu-score-pill">GPA: 7.05 / 10</span>
+                    <span style={{ fontSize: "0.85rem", color: "var(--text-muted)" }}>May 2026</span>
+                  </div>
+                </div>
+
+                <div className="edu-box">
+                  <h4>Diploma</h4>
+                  <p>T.R.R. College of Technology, Hyderabad</p>
+                  <div style={{ display: "flex", gap: "10px", flexWrap: "wrap", alignItems: "center" }}>
+                    <span className="edu-score-pill">GPA: 6.8 / 10</span>
+                    <span style={{ fontSize: "0.85rem", color: "var(--text-muted)" }}>May 2023</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="credential-column-card" style={{ margin: 0 }}>
+              <h3>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: "var(--accent-primary)" }}>
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                Certifications
+              </h3>
+
+              <div className="edu-box">
+                <h4>Salesforce Certification</h4>
+                <p>Salesforce Certified Credential</p>
+                <div style={{ display: "flex", gap: "10px", flexWrap: "wrap", alignItems: "center" }}>
+                  <span className="edu-score-pill" style={{ background: "rgba(99, 102, 241, 0.12)", color: "var(--accent-primary)", borderColor: "rgba(99, 102, 241, 0.3)" }}>
+                    Verified
+                  </span>
+                  <span style={{ fontSize: "0.85rem", color: "var(--text-muted)" }}>Apr 2025</span>
+                </div>
               </div>
             </div>
           </div>
